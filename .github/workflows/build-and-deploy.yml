@@ -1,8 +1,13 @@
 name: Build and deploy web game
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ develop ]
+  pull_request:
+    types:
+      - closed
+    branches: [ recette, main]
 
 env:
   AZURE_WEBAPP_NAME: 'globomantics-web-game'   # set this to your application's name
