@@ -6,7 +6,7 @@ on:
     branches: [ develop ]
   pull_request:
     types:
-      - closed
+      - opened
     branches: [ recette, main]
 
 env:
